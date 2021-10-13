@@ -1,0 +1,29 @@
+body{
+    /* background-color: #885522; */
+}
+.box{
+    height: 300px;
+    width: 300px;
+    background-color: #CCC;
+
+    box-shadow: 10px 10px 20px red;
+    border-radius: 20px;
+
+    /* border-top : 20px solid red;
+    border-bottom : 20px solid green;
+    border-left : 20px solid blue;
+    border-right : 20px solid yellow; */
+}
+
+
+.box2{
+    height: 300px;
+    width: 300px;
+    background-color: #9ACED1;
+    border-radius: 0px 50px 0px 20px;
+}
+
+h1{
+    font-size: 50px;
+    text-shadow: 3px 3px 5px red;
+}

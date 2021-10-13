@@ -1,0 +1,26 @@
+body{
+    margin: 0px;
+    padding: 0px;
+
+}
+.header{
+    width: 100%;
+    height: 100px;
+    background-color: #114477;
+}
+.content{
+    width: 100%;
+    min-height: 700px;
+    height: auto;
+    background-color: #61B1E5;
+}
+.footer{
+    height: 250px;
+    width: 100%;
+    background-color: #114477;
+}
+.menu{
+    width: 100%;
+    height: 60px;
+    background-color: #000;
+}
