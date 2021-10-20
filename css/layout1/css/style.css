@@ -188,7 +188,7 @@ body{
     width: 580px;
     float: left;
     margin: 15px;
-    /* background-color: green; */
+     background-color: green; 
 }
 .contact-form input[type='text']{
     display: block;
