@@ -1,0 +1,32 @@
+.bg-gray{
+    background-color: #232323;
+}
+.navbar .container{
+    padding: 10px 0;
+}
+.navbar .navbar-brand{
+    color: #FFF;
+    font-weight: bold;
+    font-size: 22px;
+}
+.text-orange{
+    color: #F03E3E;
+}
+.navbar ul li a{
+    font-weight: bold;
+    color : #fff !important;
+    padding-left : 30px !important; 
+    padding-right : 30px !important; 
+}
+.navbar ul li a:hover{
+    border-bottom: 3px solid #F03E3E;
+}
+.banner{
+    height: 600px;
+    background-image: url("../images/banner.jpg");
+    background-size: 100% 100%;
+    /* background-color: red; */
+}
+.mt-6{
+    margin-top: 250px;
+}
