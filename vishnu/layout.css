@@ -83,7 +83,7 @@ body{
 }
 .right-content{
     width: 725px;
-    min-height: 700px;
+    min-height: 690px;
     height: auto;
     /*background-color: green;*/
     float: left;
@@ -156,7 +156,7 @@ body{
 .prp-box:hover{
     border-radius: 0px 5px;
 }
-}
+
 .bottom-nav{
     height: 180px;
     width: 200px;
