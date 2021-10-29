@@ -1,0 +1,63 @@
+<html>
+    <style>
+        body{
+            margin : 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        .wrapper{
+            width: 100%;
+            height: 250px;
+            background-image: url('https://webdgallery.com/wp-content/uploads/2014/07/slider-background-graphic.jpg');
+            padding: 50px 0;
+            
+        }
+        .myform{
+            /* position: relative; */
+            margin : 0px auto;
+            background-color: rgba(0, 0, 0, .4);
+            border-radius: 10px;
+            width: 500px;
+            /* height: 180px; */
+            padding: 50px;
+            text-align: center;
+            transition: 1s;
+        }
+        .myform:hover{
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, .9);
+            box-shadow: 0 0 50px #000;
+            
+        }
+        .myform div{
+            height: 50px;
+
+        }
+        .myform div label{
+            color: #fff;
+            display: inline-block;
+            width: 100px;
+            font-size: 18px;
+        }
+        .myform input{
+            height: 30px;
+            width: 250px;
+        }
+        
+    </style>
+    <body>
+        <div class="wrapper">
+            <div class="myform">
+                <div>
+                    <label>Username</label>
+                    <input type="text" />
+                </div>
+                <div>
+                    <label>Password</label>
+                    <input type="text" />
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
