@@ -1,0 +1,9 @@
+#menu ul li input[type="text"]{
+    margin-left: 250px;
+   display: block;
+    width: 400px;
+}
+#searchbar {
+    margin-left: 450px;
+    display: block;
+}
