@@ -253,8 +253,8 @@ app.get("/",(req,res)=>{
            }
         }
      ]
-     var obj = { pro : pro};
-    res.render("index",obj);
+     var obj = { pro : pro };
+    res.render("index", obj);
 })
 app.get("/about",(req,res)=>{
     var arr = [ "blue", "red", "balck","green"];
