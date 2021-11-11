@@ -47,8 +47,8 @@ var p = { color : js};
 
  app.get("/product",(req, res)=>{
      
-     res.render("product",add);
-     var add = {data: pri};
+     
+     
 
      var pri = [
      {
@@ -112,6 +112,8 @@ var p = { color : js};
         },
      }
   ];
+    var add = { data: pri };
+    res.render("product", add);
  })
  
 
