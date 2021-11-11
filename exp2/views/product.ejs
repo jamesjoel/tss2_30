@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body class="bg-dark">
+    <div class="container">
+        <div class="row mt-5">
+            <% pro.forEach(function(x){ %>
+            <div class="col-md-3">
+                <div class="card mb-3">
+                    <img src="<%= x.image %>" height="150" class="card-img-header" />
+                    <div class="card-body">
+                        <h5><%= x.title.slice(0, 15) %></h5>
+                    </div>
+                    <div class="card-footer">
+                        <p>&pound; <%= x.price %></p>
+                        <button class="btn btn-sm btn-primary">
+                            Show
+                        </button>
+                        <br />
+                        <small>Customer Rating <%= x.rating.rate %></small>
+                    </div>
+                </div>
+
+            </div>
+            <% }) %>
+        </div>
+    </div>
+</body>
+</html>
