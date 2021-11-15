@@ -16,6 +16,8 @@ app.post("/save",(req,res)=>{
     console.log(req.body);
 });
 
+var port = process.env.PORT || 3000;
+
 app.listen(3000,()=>{
     console.log("server running");
 });
