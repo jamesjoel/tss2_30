@@ -5,7 +5,7 @@ var app = express();
 
 // i am using .listen function for creating a virtual server
 
-app.listen(3000,()=>{
+app.listen(1000,()=>{
 
     console.log("server running");
 })
