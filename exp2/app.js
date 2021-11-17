@@ -295,7 +295,7 @@ app.get("/product", (req, res) => {
 })
 
 
-app.listen(3000, () => {
+app.listen(3010, () => {
     console.log("server running");
 })
 

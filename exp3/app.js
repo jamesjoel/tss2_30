@@ -22,7 +22,7 @@ app.get("/contact", (req, res)=>{
     res.render("contact");
 })
 app.get("/myform", (req, res)=>{
-    
+    res.render("myform");
 })
 app.post("/save", (req, res)=>{
     console.log(req.body);
