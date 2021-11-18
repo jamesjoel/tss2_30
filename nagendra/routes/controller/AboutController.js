@@ -12,4 +12,4 @@ routes.get("/company",(req ,res)=>{
 })
 
 
-module.express = routes;
+module.exports = routes;

@@ -15,4 +15,4 @@ routes.get("/info/global",(req ,res)=>{
 })
 
 
-module.express = routes;
+module.exports = routes;
