@@ -1,0 +1,30 @@
+<%- include ('header.ejs') %>
+  <div class="container">
+      <div class="row">
+           <div class="col-md-12">
+               <table class="table table-hover table-border table-dark">
+                   <th>S.no</th>
+                   <th>Name</th>
+                   <th>Email</th>
+                   <% result.forEach(function(x, n){ %>
+
+                    <tr>
+                        <td><%= n+1 %></td>
+                        <td><%= x.f_name %></td>
+                        <td><%= x.email %></td>
+                        <!-- <td><a href="/teacher/view/<%= x._id %>" class="btn btn-sm btn-info"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+                        <td><a href="/teacher/delete/<%= x._id %>" class="btn btn-danger btn-sm"><i class="fa fa-trash" aria-hidden="true"></i></a></td> -->
+                    </tr>
+
+
+                <% }) %>
+                   
+               </table>
+            
+         
+
+
+            </div>
+        </div>
+    </div>
+   <%- include ('footer.ejs') %>
