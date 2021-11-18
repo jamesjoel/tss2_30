@@ -1,0 +1,28 @@
+<%- include('header') %>
+<div class="container my-5">
+    <div class="row">
+        <Br />
+        <Br />
+        <div class="col-md-10 offset-md-1">
+            <a href="/teacher" class="btn btn-info">Back</a>
+            <h2 class="text-center">
+                Information of Teacher
+            </h2>            
+            <div class="card">
+                <div class="card-header">
+                    Detail
+                </div>
+                <div class="card-body">
+                    <p><b>Full Name :</b> <%= result.full_name %></p>
+                    <p><b>Age :</b> <%= result.age %></p>
+                    <p><b>Education :</b> <%= result.edu %></p>
+                    <p><b>City :</b> <%= result.city %></p>
+                    <p><b>Address :</b> <%= result.add %></p>
+                    <p><b>Gender :</b> <%= result.gender %></p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<%- include('footer') %>
