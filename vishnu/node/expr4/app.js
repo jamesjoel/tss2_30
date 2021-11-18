@@ -1,39 +1,22 @@
-var express = require("express");
-var min = express();
+ var express = require("express");
+ var acc = express();
 
-min.set("view engine", "ejs");
 
-min.use(express.static(__dirname+"/assets"));
-
-min.use(express.json);
-min.use(express.urlencoded)
-
-min.get("/",(req,res)=>{
-    res.render("idex");
-});
+ acc.set("view engine","ejs");
  
-min.get("/about",(req,res)=>{
-    res.render("about");
-});
+ acc.use(express.static(__dirname+"/assets"));
 
-min.get("/contact",(req,res)=>{
-    res.render("contact");
-});
-
-min.get("/more",(req,res)=>{
-    res.render("more");
-})
-
-min.get("/myForm",(req,res)=>{
-    res.render("myForm");
-});
+ 
 
 
-min.post("/sub",(req,res)=>{
-    console.log(req.body);
-});
+
+ acc.get("/",(req,res)=>{
+     res.render("form");
+ });
 
 
-min.listen(8060,()=>{
-    console.log("blinking");
-});
+
+ acc.listen(8060,()=>{
+     console.log("working");
+
+ });
