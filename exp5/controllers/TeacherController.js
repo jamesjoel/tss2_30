@@ -50,6 +50,17 @@ routes.get("/view/:a", (req, res)=>{
 
 
 
+routes.get("/delete/:id", (req, res)=>{
+    // console.log(req.params.id);
+    var objid = mongodb.ObjectId(req.params.id);
+    MongoClient.connect(mongoUrl, (err, con)=>{
+        var db = con.db("tss2");
+        db.collection("teacher").deleteMany({ _id : objid }, ()=>{
+            res.redirect("/teacher");
+        })
+    })
+})
+
 
 
 routes.post("/save", (req, res)=>{
