@@ -10,7 +10,7 @@ var mongoUrl = "mongodb://localhost:27017";
 routes.get("/",(req,res)=>{
    res.render("feedback");
 });
-
+ 
 routes.post("/save", (req, res)=>{
     // console.log(req.body);
     MongoClient.connect(mongoUrl, (err, con)=>{
