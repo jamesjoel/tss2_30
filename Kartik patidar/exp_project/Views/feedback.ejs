@@ -1,0 +1,100 @@
+<%- include ('header.ejs') %>
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+                <div class="card-header bg-dark text-center">
+                    <h2 class="text-light">Customer Feedback</h2>
+                </div>
+                <!---Card-body-->
+                <div class="card-body" style="background-color: rgb(224,177,44);">
+                   <form action="/feedback/save" method="post">
+                    <!--form-group-->
+                    
+                    <div class="form-group">
+                        <!------For class & ID-->
+                       <label for="first_name">First Name</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Mr./Ms./Mrs.</div>
+                            </div>
+                            <input id="first_name" type="text" name="f_name" class=" form-control" placeholder="Name">
+                       </div>
+                   
+                    
+                    </div>
+                    <div class="form-group">
+                      <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password">
+                    <!---------------------Text-muted--------->
+                    <small class="form-text text-muted"> Password must contain 8-20 character</small>
+                    </div>
+                    <div class="form-group">
+                      <label>Email</label>
+                      <!-----read only & value---------->
+                    <input type="text" class="form-control" placeholder="Email" name="email" value="abc@exmaple.com">
+                    </div>
+                    <div class="form-group">
+                      <label for="comm">Comment</label>
+                    <textarea class="form-control" name="comment" id="comm" ></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label>Gender</label>
+                      <br />
+                      Male <input type="radio" name="Gender" value="male"/>
+                     Female <input type="radio" name="Gender" value="female" />
+                    </div>
+                    <div class="form-group">
+                        <label>City</label>
+                        <select class="form-control" name="city">
+                            <option>Select</option>
+                            <option>Indore</option>
+                            <option>Mumbai</option>
+                            <option>Pune</option>
+                            <option>Delhi</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                      <label>Hobbies</label>
+                      <div class="form-check-inline">
+                          <input name="hobbie_1" value="sports" type="checkbox" class="form-check-input">
+                          <lable class="form-check-label" >Sports</lable>
+                      </div>        
+                      <div class="form-check-inline">
+                          <input  name="hobbie_1" value="movie" type="checkbox" class="form-check-input">
+                          <lable class="form-check-label" >Movies</lable>
+                      </div>        
+                      <div class="form-check-inline">
+                          <input  name="hobbie_1" value="music" name="hobbie_1" type="checkbox" class="form-check-input">
+                          <lable class="form-check-label" >Music</lable>
+                      </div> 
+                      <div class="form-group">
+                       <label>Upload file</label>
+                       <input type="file"class="form-control-file">
+                     </div>       
+                      
+                   </div>
+
+
+                    
+                    
+                </div>
+                <div class="card-footer-inline bg-dark text-center">
+                   <!-- <input type="submit" value="Add" class="btn btn-primary" />
+                   <button class="btn btn-primary" type="submit" data-dismiss="modal" value="Add">Signup</button> -->
+                   <button type="submit" value="Add" class="btn btn-success"><i class="glyphicon glyphicon-ok"></i> Save</button>
+                   <br />
+                   <br />
+                   
+                   
+                    <a href="/showfeedback" class="btn btn-success">Show feedback</a>
+                </div>
+             </form>
+            </div>
+         </div>
+
+
+          </div>
+      </div>
+  </div>
+<%- include ('footer.ejs') %>

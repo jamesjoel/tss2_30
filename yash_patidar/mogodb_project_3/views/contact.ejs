@@ -1,0 +1,58 @@
+<%- include('header') %>
+
+<div class="container-fluid" style="background-color:gold;">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+        </br>
+    </br>
+</br>
+<h1 class="text-center m-0 p-0">Contact For Any Inquiries</h1>
+<p class=" text-center m-0">click request button</p>
+<div class="container text-center mb-5">
+<a href="/contact/request" class="btn btn-info">Request</a>
+</div>
+<div class="card" style="background-color:#17a2b8;">
+    <div class="card-header text-center">
+        <h3><b>Request List</b></h3>
+    </div>
+    <div class="card-body p-0">
+        <% if(result.length ==0){%>
+            <div class="alert alert-danger">No Data Found</div>
+        <%}else{%>
+            <table class="table table-dark table-hover table-bordered text-center ">
+                <tr>
+                    <th>S.no</th>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>Contact</th>
+                    <th>More info</th>
+                    <th>Delete</th>
+                    <th>Edit Details</th>
+                </tr>
+                <% result.forEach((x, n)=>{ %>
+                    
+            <tr>
+                <td><%= n+1 %></td>
+                <td><%= x.f_name %></td>
+                <td><%= x.city %></td>
+                <td><%= x.contact %></td>
+                <td><a href="/contact/view/<%= x._id %>" class="btn btn-sm btn-info">View</a></td>
+                <td><a href="/contact/delete/<%= x._id %>" class="btn btn-sm btn-danger">Delete</a></td>
+                <td><a href="/contact/edit/<%= x._id %>" class="btn btn-sm btn-info">Edit</a></td>
+            </tr>
+            
+            
+            
+            
+            <% }) %>
+            
+        </table>
+        <%}%>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+
+<%- include('footer') %>
