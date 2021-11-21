@@ -1,0 +1,29 @@
+<%- include('header') %>
+<div class="container" >
+    <h3 class="text-center">participant</h3>
+    <a href="/about/add_players" class="btn btn-sm btn-info">apply</a>
+    <div class="container">
+        <div class="row mr-3">
+            <div class="col-md-5 offset-md-3">
+                <table class="table table-bordered table-dark table-hover">
+                    <tr>
+                        <th> s.no. </th>
+                        <th> name </th>
+                        <th> age</th>   
+                    </tr>
+                    <% result.forEach(fuction(x, n){ %>
+                        <tr>
+                            <td><%= n+1 %></td>
+                            <td><%= x.name %></td>
+                            <td><%= x.age %></td>
+                        </tr>
+
+                   <% }) %>
+                </table>
+            </div> 
+        </div>
+    </div>
+
+</div>
+
+<%- include('footer') %>
