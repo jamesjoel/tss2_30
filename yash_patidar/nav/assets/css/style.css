@@ -1,0 +1,16 @@
+
+
+#brand{
+	color:yellow;
+}
+
+.navbar ul li a:hover{
+    
+    transform: scale(1.2);
+    border-bottom: 3px solid yellow;
+}
+
+.navbar ul li{
+
+    padding-left: 50px;
+}

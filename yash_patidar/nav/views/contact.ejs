@@ -1,0 +1,99 @@
+<%- include('header') %>
+
+<div class="container" style="min-height: 650px;">
+    <h3>Contact Page</h3>
+    <button data-toggle="modal" data-target="#moda" class="btn btn-info">Add Student</button>
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h3 style="text-align: center; color:#343a40; background-color:#17a2b8; margin: 0px; padding-top: 5px; padding-bottom: 5px;"  >Student List</h3>
+            <table class="table table-dark table-hover text-center table-bordered  ">
+                <tr>
+                    <th>S.no</th>
+                    <th>Name</th>
+                    <th>Class</th>
+                    <th>Subject</th>
+                    <th>View</th>
+                    <th>Delete</th>
+                    <th>Edit</th>
+                     
+                </tr>
+                <% result.forEach(function(x, n){ %>
+                <tr>
+                    <td><%= n+1 %></td>
+                    <td><%= x.s_name %></td>
+                    <td><%= x.s_edu %></td>
+                    <td><%= x.s_sub %></td>
+                    <td><a class="btn btn-info" href="/contact/view/<%= x._id %>"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+                    <td><a class="btn btn-danger" href="/contact/delete/<%= x._id %>"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+                    <td><a class="btn btn-primary" href="/contact/edit/<%= x._id %>"><i class="fa fa-pencil-square" aria-hidden="true"></i></a></td>
+       
+                </tr>
+                
+            <% }); %>
+
+            
+                    
+                
+       
+            </table>
+            
+         </div>
+     </div>
+</div>
+
+<div class="modal fade" id="moda" >
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form action="/contact" method="post">
+            <div class="modal-header">
+                <h2>Student Registration</h2>
+            </div>
+            <div class="modal-body">
+               <div class="form-group">
+                   <label>First Name</label>
+                   <input type="text" name="s_name" class="form-control"  />
+               </div>
+               <div class="form-group">
+                   <label for="class">Class</label>
+                   <select name="s_edu" class="form-control" n >
+                       <option>select</option>
+                       <% for(var i=1; i<=12; i++){%>
+                       <option><%= i %></option>
+                       <% } %>
+                   </select>
+               </div>
+               <div class="form-group">
+                   <label>Subject</label>
+                   <select name="s_sub" class="form-control">
+                       <option>select</option>
+                       <option>All</option>
+                       <option>PCB</option>
+                       <option>PCM</option>
+                       <option>Commerce</option>
+                       <option>Art</option>
+                   </select>
+               </div>
+               <div class="form-group">
+                   <label>Cast</label></br>
+                   General &nbsp;&nbsp;<input name="cast" value="General" type="checkbox"/>&nbsp;&nbsp;&nbsp;&nbsp;
+                   OBC&nbsp;&nbsp;<input name="cast" value="OBC" type="checkbox"/>&nbsp;&nbsp;&nbsp;&nbsp;
+                   SC&nbsp;&nbsp;<input name="cast" value="SC" type="checkbox"/>
+
+               </div>
+               <div class="form-group">
+                   <label>Fees</label>
+                   <input type="text" name="fees" class="form-control"/>
+               </div>
+
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" type="submit">Submit</button>
+                <button class="btn btn-danger" data-dismiss="modal" >Close</button>
+
+            </div>
+            <form>
+        </div>
+    </div>
+</div>
+
+<%- include('footer') %>
