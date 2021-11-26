@@ -1,1 +1,37 @@
-<p>home works!</p>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h2>Home Page</h2>
+            <h4>{{ a }}</h4>
+            <p>{{ b }}</p>
+
+            <h2>{{ x+y }}</h2>
+            <h2>{{ x == 20 ? "red" : "blue" }}</h2>
+            <h2 *ngIf="y==40">Hello</h2>
+
+            <h1 *ngIf="z==10; else myid">James</h1>
+            
+            <ng-template #myid>
+                <h1>Amar</h1>
+            </ng-template>
+
+            <br />
+            <ng-template [ngIf]="a=='abc'" [ngIfElse]="mybox">
+                my name is James joel
+            </ng-template>
+            <ng-template #mybox>
+                my name is amar varma
+            </ng-template>
+            <Br/>
+            
+            <div [ngSwitch]="city">
+                <h1 *ngSwitchCase="100">Red</h1>
+                <h1 *ngSwitchCase="'mumbai'">Blue</h1>
+                <h1 *ngSwitchCase="'pune'">Green</h1>
+                <h1 *ngSwitchCase="'delhi'">Pink</h1>
+                <h1 *ngSwitchDefault>No Color</h1>
+            </div>
+
+        </div>
+    </div>
+</div>
