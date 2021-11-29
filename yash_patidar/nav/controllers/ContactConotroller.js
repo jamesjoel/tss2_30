@@ -19,7 +19,7 @@ routes.get("/",(req ,res)=>{
 });
 
 routes.post("/",(req, res)=>{
-    console.log(req.body);
+   // console.log(req.body);
          MongoClient.connect(mongoURL, (err, con)=>{
              var db = con.db("nodejs");
              db.collection("student").insertOne(req.body, ()=>{
