@@ -30,6 +30,7 @@
               "src/styles.css",
               "src/assets/plugins/font-awesome/css/font-awesome.min.css",
               "src/assets/plugins/bootstrap/css/bootstrap.min.css",
+              "src/assets/plugins/bootstrap4/css/bootstrap.min.css",
               "src/assets/pages/css/animate.css",
               "src/assets/plugins/fancybox/source/jquery.fancybox.css",
               "src/assets/plugins/owl.carousel/assets/owl.carousel.css",

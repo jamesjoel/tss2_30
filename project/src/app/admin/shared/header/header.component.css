@@ -1,0 +1,9 @@
+.header{
+    background-color: #000000;
+}
+.header ul li a{
+    color: #FFF;
+}
+.header ul li a:hover{
+    color: #000000;
+}
