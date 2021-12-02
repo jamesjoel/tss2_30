@@ -1,1 +1,14 @@
-<p>about works!</p>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Events in Angular</h1>
+            <button class="btn {{ b }}" (click)="demo1()">{{ a }}</button>
+            <Br />
+            <br />
+            <button class="btn btn-info" (dblclick)="demo2()">{{ x }}</button>
+            <br />
+            <Br />
+            <button class="btn btn-dark" (click)="demo3()">{{ y }} <span *ngIf="check" class="spinner-border spinner-border-sm"></span></button>
+        </div>
+    </div>
+</div>

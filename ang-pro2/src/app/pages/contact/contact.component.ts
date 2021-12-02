@@ -12,4 +12,8 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  demo1(){
+    console.log("hello");
+  }
+
 }
