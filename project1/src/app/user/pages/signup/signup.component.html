@@ -1,6 +1,7 @@
 <div class="container my-5">
     <div class="row">
         <div class="col-md-6 offset-md-3">
+            <form [formGroup]="regForm">
             <div class="card">
                 <div class="card-header">
                     <h4 class="text-center">User Registration</h4>
@@ -8,49 +9,74 @@
                 <div class="card-body">
                     <div class="form-group">
                         <label>Full Name</label>
-                        <input type="text" placeholder="Full Name" class="form-control" />
+                        <input [ngClass]="{'is-invalid' : regForm.controls.fullname.errors && checkForm}" formControlName="fullname" type="text" placeholder="Full Name" class="form-control" />
+                        <div class="invalid-feedback" *ngIf="regForm.controls.fullname.errors && checkForm">
+                            Insert Your Full Name
+                        </div>
                     </div>
                     <div class="form-group">
                         <label>Email/Username</label>
-                        <input type="text" placeholder="Email/Username" class="form-control" />
+                        <input [ngClass]="{'is-invalid' : regForm.controls.email.errors && checkForm}" formControlName="email" type="text" placeholder="Email/Username" class="form-control" />
+                        <div class="invalid-feedback" *ngIf="regForm.controls.email.errors && checkForm">
+                            Insert Your Email Id/Username
+                        </div>
                     </div>
                     <div class="form-group">
                         <label>Password</label>
-                        <input type="password" placeholder="Password" class="form-control" />
+                        <input [ngClass]="{'is-invalid' : regForm.controls.password.errors && checkForm}" formControlName="password" type="password" placeholder="Password" class="form-control" />
+                        <div class="invalid-feedback" *ngIf="regForm.controls.password.errors && checkForm">
+                            Insert Your Password
+                        </div>
                     </div>
                     <div class="form-group">
                         <label>Re-Password</label>
-                        <input type="password" placeholder="Re-Password" class="form-control" />
+                        <input [ngClass]="{'is-invalid' : regForm.controls.re_password.errors && checkForm}" formControlName="re_password" type="password" placeholder="Re-Password" class="form-control" />
+                        <div class="invalid-feedback" *ngIf="regForm.controls.re_password.errors && checkForm">
+                            Insert Your Re-Password
+                        </div>
                     </div>
                     <div class="form-group">
                         <label>Address</label>
-                        <textarea class="form-control" placeholder="Address"></textarea>
+                        <textarea [ngClass]="{'is-invalid' : regForm.controls.address.errors && checkForm}" formControlName="address" class="form-control" placeholder="Address"></textarea>
+                        <div class="invalid-feedback" *ngIf="regForm.controls.address.errors && checkForm">
+                            Insert Your Address
+                        </div>
                     </div>
                     <div class="form-group">
                         <label>Gender</label>
                         <br />
-                        Male <input type="radio" name="gender" />
-                        Female <input type="radio" name="gender" />
+                        Male <input value="male" [ngClass]="{'is-invalid' : regForm.controls.gender.errors && checkForm}" formControlName="gender" type="radio"  />
+                        Female <input value="female" [ngClass]="{'is-invalid' : regForm.controls.gender.errors && checkForm}" formControlName="gender" type="radio"  />
+                        <div class="invalid-feedback" *ngIf="regForm.controls.gender.errors && checkForm">
+                            Select Your Gender
+                        </div>
                     </div>
                     <div class="form-group">
                         <label>City</label>
-                        <select class="form-control">
+                        <select class="form-control" [ngClass]="{'is-invalid' : regForm.controls.city.errors && checkForm}" formControlName="city">
                             <option>Select</option>
                             <option>Indore</option>
                             <option>Mumbai</option>
                             <option>Pune</option>
                             <option>Delhi</option>
                         </select>
+                        <div class="invalid-feedback" *ngIf="regForm.controls.city.errors && checkForm">
+                            Select Your City
+                        </div>
                     </div>
                     <div class="form-group">
                         <label>Contact</label>
-                        <input type="text" placeholder="Contact" class="form-control" />
+                        <input [ngClass]="{'is-invalid' : regForm.controls.contact.errors && checkForm}" formControlName="contact" type="text" placeholder="Contact" class="form-control" />
+                        <div class="invalid-feedback" *ngIf="regForm.controls.contact.errors && checkForm">
+                            Insert Your Contact Number
+                        </div>
                     </div>
                 </div>
                 <div class="card-footer">
-                    <input type="submit" value="Signup" class="btn btn-primary" />
+                    <input type="submit" (click)="submit()" value="Signup" class="btn btn-primary" />
                 </div>
             </div>
+            </form>
         </div>
     </div>
 </div>
