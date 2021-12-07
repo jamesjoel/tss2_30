@@ -18,7 +18,12 @@
                         <label>Email/Username</label>
                         <input [ngClass]="{'is-invalid' : regForm.controls.email.errors && checkForm}" formControlName="email" type="text" placeholder="Email/Username" class="form-control" />
                         <div class="invalid-feedback" *ngIf="regForm.controls.email.errors && checkForm">
-                            Insert Your Email Id/Username
+                            <div *ngIf="regForm.controls.email.errors.required">
+                                Insert Your Email/Username
+                            </div>
+                            <div *ngIf="regForm.controls.email.errors.email">
+                                Email Id is Not Correct
+                            </div>
                         </div>
                     </div>
                     <div class="form-group">
@@ -32,7 +37,12 @@
                         <label>Re-Password</label>
                         <input [ngClass]="{'is-invalid' : regForm.controls.re_password.errors && checkForm}" formControlName="re_password" type="password" placeholder="Re-Password" class="form-control" />
                         <div class="invalid-feedback" *ngIf="regForm.controls.re_password.errors && checkForm">
-                            Insert Your Re-Password
+                            <div *ngIf="regForm.controls.re_password.errors.required">
+                                Insert Your Re-Password
+                            </div>
+                            <div *ngIf="regForm.controls.re_password.errors.repasserr">
+                                Password and Re-Password not Matched
+                            </div>
                         </div>
                     </div>
                     <div class="form-group">
@@ -42,15 +52,41 @@
                             Insert Your Address
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label>Gender</label>
-                        <br />
-                        Male <input value="male" [ngClass]="{'is-invalid' : regForm.controls.gender.errors && checkForm}" formControlName="gender" type="radio"  />
-                        Female <input value="female" [ngClass]="{'is-invalid' : regForm.controls.gender.errors && checkForm}" formControlName="gender" type="radio"  />
-                        <div class="invalid-feedback" *ngIf="regForm.controls.gender.errors && checkForm">
-                            Select Your Gender
+                    <label>Gender</label>
+                    <div>
+                        <div class="custom-control custom-radio float-left mt-0 pt-0">
+                            <br />
+                            <input value="male" id="male" [ngClass]="{'is-invalid' : regForm.controls.gender.errors && checkForm }" formControlName="gender" class="custom-control-input"  type="radio"  />
+                            <label for="male" class="custom-control-label">Male</label>
+                        </div>
+                        <div class="custom-control custom-radio float-left mt-0 pl-5">
+                            <br />
+                            <input value="female" id="female" [ngClass]="{'is-invalid' : regForm.controls.gender.errors && checkForm }" formControlName="gender" class="custom-control-input"  type="radio"  />
+                            <label for="female" class="custom-control-label">Female</label>
+                            <div class="invalid-feedback" *ngIf="regForm.controls.gender.errors && checkForm">
+                                    Select Your Gender
+                            </div>
                         </div>
                     </div>
+                    <br />
+                    <br />
+                    <br />
+                    
+                    <!-- <div class="custom-control custom-radio">
+                        <input
+                          type="radio"
+                          class="custom-control-input is-invalid"
+                          name="radio_buttons"
+                          id="id_id_radio_buttons_0_10"
+                          value="option_one"
+                        />
+                        <label
+                          for="id_id_radio_buttons_0_10"
+                          class="custom-control-label"
+                          >Option one is this and that be sure to include why it's
+                          great
+                        </label>
+                      </div> -->
                     <div class="form-group">
                         <label>City</label>
                         <select class="form-control" [ngClass]="{'is-invalid' : regForm.controls.city.errors && checkForm}" formControlName="city">
@@ -68,7 +104,15 @@
                         <label>Contact</label>
                         <input [ngClass]="{'is-invalid' : regForm.controls.contact.errors && checkForm}" formControlName="contact" type="text" placeholder="Contact" class="form-control" />
                         <div class="invalid-feedback" *ngIf="regForm.controls.contact.errors && checkForm">
-                            Insert Your Contact Number
+                            <div *ngIf="regForm.controls.contact.errors.required">
+                                Insert Your Contact Number
+                            </div>
+                            <div *ngIf="regForm.controls.contact.errors.numerr">
+                                Insert Numbers only
+                            </div>
+                            <div *ngIf="regForm.controls.contact.errors.lengtherr">
+                                Contact Number must be 10 digit
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { checkRePass, checkNum, checkLength } from '../../../helpers/custome.validation';
 
 @Component({
   selector: 'app-signup',
@@ -16,13 +17,16 @@ export class SignupComponent implements OnInit {
   ) {
     this.regForm = this._fb.group({
       fullname : ["", Validators.required],
-      email : ["", Validators.required],
+      email : ["", [Validators.required, Validators.email]],
       password : ["", Validators.required],
       re_password : ["", Validators.required],
       address : ["", Validators.required],
       gender : ["", Validators.required],
       city : ["", Validators.required],
       contact : ["", Validators.required]
+    },
+    {
+      validator : [checkRePass(), checkNum(), checkLength()]
     })
    }
 

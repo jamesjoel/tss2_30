@@ -4,6 +4,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { HelpComponent } from './pages/help/help.component';
 import { HomeComponent } from './pages/home/home.component';
+import { ProductComponent } from './pages/product/product.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path : "help",
     component : HelpComponent
+  },
+  {
+    path : "product",
+    component : ProductComponent
   }
 ];
 

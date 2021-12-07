@@ -1,0 +1,26 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-10 offset-md-1">
+            <h3 class="text-center">All Product</h3>
+            <button class="btn btn-primary" (click)="demo()">{{ btnMsg }} <span *ngIf="show" class="spinner-border spinner-border-sm"></span></button>
+            <br />
+            <table class="table table-dark table-hover table-bordered">
+                <tr>
+                    <th>S.No.</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Category</th>
+                    <th>Image</th>
+                </tr>
+
+                <tr *ngFor="let p of allProduct; let n = index">
+                    <td>{{ n+1 }}</td>
+                    <td>{{ p.title }}</td>
+                    <td>{{ p.price }}</td>
+                    <td>{{ p.category }}</td>
+                    <td><img src="{{ p.image }}" height="80" width="80" /></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HelpComponent } from './pages/help/help.component';
+import { ProductComponent } from './pages/product/product.component';
 
 @NgModule({
   declarations: [
@@ -20,12 +22,14 @@ import { HelpComponent } from './pages/help/help.component';
     ContactComponent,
     HeaderComponent,
     FooterComponent,
-    HelpComponent
+    HelpComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
