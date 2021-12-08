@@ -1,9 +1,11 @@
 var express = require("express");
 var app = express();
 var routes = require("./config/rotues");
+var cors = require("cors");
 
 app.use(express.json());
 app.use(express.urlencoded());
+app.use(cors());
 
 app.use(routes);
 

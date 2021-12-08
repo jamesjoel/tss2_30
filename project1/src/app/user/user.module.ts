@@ -14,6 +14,7 @@ import { RequestBoxComponent } from './shared/request-box/request-box.component'
 import { FooterComponent } from './shared/footer/footer.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import { FileInfoComponent } from './shared/file-info/file-info.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { SignupComponent } from './pages/signup/signup.component';
     RequestBoxComponent,
     FooterComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    FileInfoComponent
   ],
   imports: [
     CommonModule,
