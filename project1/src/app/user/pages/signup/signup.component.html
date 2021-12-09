@@ -1,8 +1,11 @@
 <div class="container my-5">
     <div class="row">
         <div class="col-md-6 offset-md-3">
+            <div *ngIf="afterSubmit" class="alert alert-success">
+                You are successfuly Registrered, For Login <a routerLink="/login">Click Here</a>
+            </div>
             <form [formGroup]="regForm">
-            <div class="card">
+            <div  class="card">
                 <div class="card-header">
                     <h4 class="text-center">User Registration</h4>
                 </div>
@@ -90,11 +93,11 @@
                     <div class="form-group">
                         <label>City</label>
                         <select class="form-control" [ngClass]="{'is-invalid' : regForm.controls.city.errors && checkForm}" formControlName="city">
-                            <option>Select</option>
-                            <option>Indore</option>
-                            <option>Mumbai</option>
-                            <option>Pune</option>
-                            <option>Delhi</option>
+                            <option value="">Select</option>
+                            <option value="indore">Indore</option>
+                            <option value="mumbai">Mumbai</option>
+                            <option value="pune">Pune</option>
+                            <option value="delhi">Delhi</option>
                         </select>
                         <div class="invalid-feedback" *ngIf="regForm.controls.city.errors && checkForm">
                             Select Your City
@@ -121,6 +124,8 @@
                 </div>
             </div>
             </form>
-        </div>
+
+
+               </div>
     </div>
 </div>
