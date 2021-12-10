@@ -7,13 +7,17 @@ import { environment } from '../../environments/environment';
 })
 export class FiletypeService {
 
-  apiUrl = environment.API_URL;
+  apiUrl = environment.API_URL+"/api/filetype";
   
   constructor(
     private _http : HttpClient
   ) { }
 
   getAll(){
-    return this._http.get<any>(this.apiUrl+"/api/filetype");
+    return this._http.get<any>(this.apiUrl);
+  }
+
+  save(obj:any){
+    return this._http.post<any>(this.apiUrl, obj);
   }
 }
