@@ -1,6 +1,7 @@
 <div class="container mt-4">
     <div class="row">
         <div class="col-md-8 offset-md-2">
+            <!-- <p>{{ fileType | json }}</p> -->
             <a routerLink="/admin/add-file-type" class="btn btn-primary">Add Types</a>
             <table class="table table-bordered table-dark mt-3">
                 <tr>
@@ -17,9 +18,26 @@
                     <td>{{ t.type }}</td>
                     <td><span [innerHTML]="t.icon"></span></td>
                     <td><button class="btn btn-sm btn-info">Edit</button></td>
-                    <td><button class="btn btn-sm btn-danger">Delete</button></td>
+                    <td><button (click)="askDelete(t)" data-toggle="modal" data-target="#delModal" class="btn btn-sm btn-danger">Delete</button></td>
                 </tr>
             </table>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="delModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Delete File Type Category</h3>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure want to delete <b *ngIf="fileType">{{ fileType.type_name}}</b></p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-dark" data-dismiss="modal">Close</button>
+                <button class="btn btn-danger" (click)="confDelete()">Delete</button>
+            </div>
         </div>
     </div>
 </div>

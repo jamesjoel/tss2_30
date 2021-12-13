@@ -20,4 +20,7 @@ export class FiletypeService {
   save(obj:any){
     return this._http.post<any>(this.apiUrl, obj);
   }
+  delete(id:any){
+    return this._http.delete<any>(this.apiUrl+"/"+id);
+  }
 }

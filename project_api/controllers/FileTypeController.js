@@ -27,4 +27,16 @@ routes.post("/", (req, res)=>{
     })
 })
 
+
+routes.delete("/:id", (req, res)=>{
+    var id = mongodb.ObjectId(req.params.id);
+    MongoClient.connect(database.dbUrl, (err, con)=>{
+        var db = con.db(database.dbName);
+        db.collection(collName).deleteMany({ _id : id }, ()=>{
+            res.send({ success : true });
+        })
+    })
+})
+
+
 module.exports = routes;

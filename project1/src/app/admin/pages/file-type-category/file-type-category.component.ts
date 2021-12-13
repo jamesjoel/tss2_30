@@ -9,6 +9,8 @@ import { FiletypeService } from '../../../services/filetype.service';
 export class FileTypeCategoryComponent implements OnInit {
 
   allFileType : any=[];
+
+  fileType:any;
   constructor(
     private _fileServ : FiletypeService
   ) {
@@ -19,5 +21,16 @@ export class FileTypeCategoryComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  askDelete(obj:any){
+    // console.log("--------------", obj);
+    this.fileType = obj;
+  }
+
+  confDelete(){
+    this._fileServ.delete(this.fileType._id).subscribe(result=>{
+      console.log(result);
+    })
+  } 
 
 }
