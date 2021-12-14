@@ -26,7 +26,7 @@
                 </div>
             </div>
             <br />
-            <input type="submit" (click)="submit()" value="Add" class="btn btn-success" />
+            <input type="submit" (click)="submit()" value="{{ typeForm.controls._id.value == '' ? 'Add' : 'Update' }}" class="btn btn-success" />
             </form>
         </div>
     </div>

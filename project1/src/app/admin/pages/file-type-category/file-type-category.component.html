@@ -17,7 +17,7 @@
                     <td>{{ t.type_name }}</td>
                     <td>{{ t.type }}</td>
                     <td><span [innerHTML]="t.icon"></span></td>
-                    <td><button class="btn btn-sm btn-info">Edit</button></td>
+                    <td><a routerLink="/admin/edit-file-type/{{ t._id }}" class="btn btn-sm btn-info">Edit</a></td>
                     <td><button (click)="askDelete(t)" data-toggle="modal" data-target="#delModal" class="btn btn-sm btn-danger">Delete</button></td>
                 </tr>
             </table>
@@ -35,8 +35,8 @@
                 <p>Are you sure want to delete <b *ngIf="fileType">{{ fileType.type_name}}</b></p>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-dark" data-dismiss="modal">Close</button>
-                <button class="btn btn-danger" (click)="confDelete()">Delete</button>
+                <button class="btn btn-dark" #closeBtn data-dismiss="modal">Close</button>
+                <button class="btn btn-danger" (click)="confDelete(closeBtn)">Delete</button>
             </div>
         </div>
     </div>

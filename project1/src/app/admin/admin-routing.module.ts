@@ -28,6 +28,10 @@ const routes: Routes = [
       {
         path : "add-file-type",
         component : AddFileTypeComponent
+      },
+      {
+        path : "edit-file-type/:id",
+        component : AddFileTypeComponent
       }
     ]
   }

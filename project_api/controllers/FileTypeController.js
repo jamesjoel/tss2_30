@@ -16,8 +16,18 @@ routes.get("/", (req, res)=>{
         })
     })
 })
+routes.get("/:id", (req, res)=>{
+    var id = mongodb.ObjectId(req.params.id);
+    MongoClient.connect(database.dbUrl, (err, con)=>{
+        var db = con.db(database.dbName);
+        db.collection(collName).find({ _id : id }).toArray((err, result)=>{
+            res.send(result[0]);
+        })
+    })
+})
 routes.post("/", (req, res)=>{
-    console.log(req.body);
+    // console.log(req.body);
+    delete req.body._id;
     MongoClient.connect(database.dbUrl, (err, con)=>{
         var db = con.db(database.dbName);
         db.collection(collName).insertOne(req.body, ()=>{
@@ -33,6 +43,17 @@ routes.delete("/:id", (req, res)=>{
     MongoClient.connect(database.dbUrl, (err, con)=>{
         var db = con.db(database.dbName);
         db.collection(collName).deleteMany({ _id : id }, ()=>{
+            res.send({ success : true });
+        })
+    })
+})
+
+routes.put("/:id", (req, res)=>{
+    var id = mongodb.ObjectId(req.params.id);
+    delete req.body._id;
+    MongoClient.connect(database.dbUrl, (err, con)=>{
+        var db = con.db(database.dbName);
+        db.collection(collName).updateMany({ _id : id },{$set : req.body},()=>{
             res.send({ success : true });
         })
     })

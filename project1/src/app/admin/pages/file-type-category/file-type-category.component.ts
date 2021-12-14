@@ -27,9 +27,12 @@ export class FileTypeCategoryComponent implements OnInit {
     this.fileType = obj;
   }
 
-  confDelete(){
+  confDelete(btn:any){
     this._fileServ.delete(this.fileType._id).subscribe(result=>{
-      console.log(result);
+      // console.log(result);
+      let n = this.allFileType.indexOf(this.fileType);
+      this.allFileType.splice(n, 1);
+      btn.click();
     })
   } 
 
