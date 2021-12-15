@@ -1,8 +1,8 @@
 var express = require("express");
-routes = express.Router();
+var routes = express.Router();
  
 routes.use("/api/user", require("../controllers/UserController"));
-
+routes.use("/api/filetype", require("../controllers/FiletypeController"));
 
 
 module.exports = routes ;
