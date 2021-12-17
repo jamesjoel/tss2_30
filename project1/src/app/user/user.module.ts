@@ -15,6 +15,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { FileInfoComponent } from './shared/file-info/file-info.component';
+import { MyAccountComponent } from './pages/my-account/my-account.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { FileInfoComponent } from './shared/file-info/file-info.component';
     FooterComponent,
     LoginComponent,
     SignupComponent,
-    FileInfoComponent
+    FileInfoComponent,
+    MyAccountComponent
   ],
   imports: [
     CommonModule,

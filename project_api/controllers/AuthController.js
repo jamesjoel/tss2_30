@@ -4,6 +4,8 @@ var mongodb = require("mongodb");
 var MongoClient = mongodb.MongoClient;
 var database = require("../config/database");
 var sha1 = require("sha1");
+var jwt = require("jsonwebtoken");
+
 
 routes.post("/", (req, res)=>{
     // console.log(req.body);
@@ -15,7 +17,8 @@ routes.post("/", (req, res)=>{
             {
                 if(result[0].password == sha1(req.body.password))
                 {
-                    res.status(200).send({ success : true });
+                    var token = jwt.sign(result[0], database.encryptStr);
+                    res.status(200).send({ success : true, token : token });
                 }
                 else{
 

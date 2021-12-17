@@ -7,7 +7,10 @@ import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import { MyAccountComponent } from './pages/my-account/my-account.component';
 
+import { BackdoorGuard } from './guards/backdoor.guard';
+import { AntiBackdoorGuard } from './guards/anti-backdoor.guard';
 const routes: Routes = [
   {
     path : "",
@@ -27,11 +30,18 @@ const routes: Routes = [
       },
       {
         path : "login",
-        component : LoginComponent
+        component : LoginComponent,
+        canActivate : [AntiBackdoorGuard]
       },
       {
         path : "signup",
-        component : SignupComponent
+        component : SignupComponent,
+        canActivate : [AntiBackdoorGuard]
+      },
+      {
+        path : "my-account",
+        component : MyAccountComponent,
+        canActivate : [BackdoorGuard]
       }
     ]
   }

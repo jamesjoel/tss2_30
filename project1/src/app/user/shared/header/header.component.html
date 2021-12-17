@@ -19,12 +19,32 @@
             <li class="nav-item">
               <a class="nav-link" routerLink="/contact">Contact Us</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/login">Login</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/signup">Signup</a>
-            </li>
+
+            <ng-template [ngIf]="_authService.isLoggedIn()" [ngIfElse]="notloginin">
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/my-account">My-Account</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" (click)="_authService.logout()">Logout</a>
+              </li>
+            </ng-template>
+            
+            <ng-template #notloginin>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/login">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/signup">Signup</a>
+              </li>
+            </ng-template>
+
+
+
+
+
+
+
+            
             
           </ul>
         </div>
