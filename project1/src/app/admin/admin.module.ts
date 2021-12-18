@@ -10,6 +10,7 @@ import { FileTypeCategoryComponent } from './pages/file-type-category/file-type-
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { AddFileTypeComponent } from './pages/add-file-type/add-file-type.component';
+import { UsersComponent } from './pages/users/users.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { AddFileTypeComponent } from './pages/add-file-type/add-file-type.compon
     FileTypeCategoryComponent,
     HeaderComponent,
     FooterComponent,
-    AddFileTypeComponent
+    AddFileTypeComponent,
+    UsersComponent
   ],
   imports: [
     CommonModule,

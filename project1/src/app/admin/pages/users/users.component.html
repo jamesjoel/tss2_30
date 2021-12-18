@@ -1,0 +1,22 @@
+<div class="container my-4">
+    <div class="row">
+        <table class="table table-dark table-bordered table-hover">
+            <tr>
+                <th>S.No.</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Contact</th>
+                <th>Status</th>
+                
+            </tr>
+            <tr *ngFor="let u of allUsers; let n = index">
+                <td>{{ n+1 }}</td>
+                <td>{{ u.fullname }}</td>
+                <td>{{ u.email }}</td>
+                <td>{{ u.contact }}</td>
+                <td><button class="btn btn-sm" [ngClass]="{'btn-success' : u.status == 0, 'btn-danger' : u.status == 1}"  (click)="change(u)">{{ u.status==0 ? 'Enable' : 'Disabled' }}</button></td>
+                
+            </tr>
+        </table>
+    </div>  
+</div>

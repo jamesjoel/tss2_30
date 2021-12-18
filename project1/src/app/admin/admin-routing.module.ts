@@ -5,6 +5,7 @@ import { AddFileTypeComponent } from './pages/add-file-type/add-file-type.compon
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { FileTypeCategoryComponent } from './pages/file-type-category/file-type-category.component';
 import { LoginComponent } from './pages/login/login.component';
+import { UsersComponent } from './pages/users/users.component';
 
 
 
@@ -32,6 +33,10 @@ const routes: Routes = [
       {
         path : "edit-file-type/:id",
         component : AddFileTypeComponent
+      },
+      {
+        path : "users",
+        component : UsersComponent
       }
     ]
   }

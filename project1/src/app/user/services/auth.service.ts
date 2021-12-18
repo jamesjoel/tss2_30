@@ -25,9 +25,17 @@ export class AuthService {
     }
   }
 
+
   logout(){
     localStorage.removeItem("token");
     this._router.navigate(["/login"]);
+  }
+
+  getUserInfo(){
+    return this._http.get<any>("http://localhost:3000/api/userinfo", 
+    {
+      headers : { Authorization : JSON.stringify(localStorage.getItem("token")) }
+    });
   }
 
 }
