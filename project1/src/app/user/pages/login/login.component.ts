@@ -55,6 +55,13 @@ export class LoginComponent implements OnInit {
         this.errorMsg = "This Password is Incorrect !";
 
       }
+      if(err.error.type ==3)
+      {
+        this.checkEmailErr = false;
+        this.checkPassErr = true;
+        this.errorMsg = "You Are Disabled";
+
+      }
       
     })
   }

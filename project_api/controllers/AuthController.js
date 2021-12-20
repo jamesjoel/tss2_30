@@ -17,8 +17,14 @@ routes.post("/", (req, res)=>{
             {
                 if(result[0].password == sha1(req.body.password))
                 {
-                    var token = jwt.sign({_id : result[0]._id, email : result[0].email }, database.encryptStr);
-                    res.status(200).send({ success : true, token : token });
+                    if(result[0].status == 1){
+
+                        var token = jwt.sign({_id : result[0]._id, email : result[0].email }, database.encryptStr);
+                        res.status(200).send({ success : true, token : token });
+                    }else{
+
+                        res.status(403).send({ success : false, type : 3});
+                    }
                 }
                 else{
 
