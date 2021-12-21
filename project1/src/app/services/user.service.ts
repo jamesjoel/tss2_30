@@ -32,6 +32,10 @@ export class UserService {
     return this._http.put<any>(this.apiUrl+"/api/user/"+id, obj);
 
   }
+
+  updatePass(id:any, obj:any){
+    return this._http.post<any>(this.apiUrl+"/api/userinfo/changepass/"+id, obj);
+  }
   
   
 
