@@ -11,6 +11,8 @@ import { MyAccountComponent } from './pages/my-account/my-account.component';
 
 import { BackdoorGuard } from './guards/backdoor.guard';
 import { AntiBackdoorGuard } from './guards/anti-backdoor.guard';
+import { MyDriveComponent } from './pages/my-drive/my-drive.component';
+import { UploadToDriveComponent } from './pages/upload-to-drive/upload-to-drive.component';
 const routes: Routes = [
   {
     path : "",
@@ -41,6 +43,16 @@ const routes: Routes = [
       {
         path : "my-account",
         component : MyAccountComponent,
+        canActivate : [BackdoorGuard]
+      },
+      {
+        path : "my-drive",
+        component : MyDriveComponent,
+        canActivate : [BackdoorGuard]
+      },
+      {
+        path : "upload-to-drive",
+        component : UploadToDriveComponent,
         canActivate : [BackdoorGuard]
       }
     ]

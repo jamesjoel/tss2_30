@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { FormsModule } from '@angular/forms';
+
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { UserRoutingModule } from './user-routing.module';
@@ -16,6 +18,9 @@ import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { FileInfoComponent } from './shared/file-info/file-info.component';
 import { MyAccountComponent } from './pages/my-account/my-account.component';
+import { MyDriveComponent } from './pages/my-drive/my-drive.component';
+import { UploadToDriveComponent } from './pages/upload-to-drive/upload-to-drive.component';
+
 
 
 @NgModule({
@@ -31,12 +36,16 @@ import { MyAccountComponent } from './pages/my-account/my-account.component';
     LoginComponent,
     SignupComponent,
     FileInfoComponent,
-    MyAccountComponent
+    MyAccountComponent,
+    MyDriveComponent,
+    UploadToDriveComponent
+    
   ],
   imports: [
     CommonModule,
     UserRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class UserModule { }
