@@ -20,6 +20,7 @@ import { FileInfoComponent } from './shared/file-info/file-info.component';
 import { MyAccountComponent } from './pages/my-account/my-account.component';
 import { MyDriveComponent } from './pages/my-drive/my-drive.component';
 import { UploadToDriveComponent } from './pages/upload-to-drive/upload-to-drive.component';
+import { SizePipe } from './pipe/size.pipe';
 
 
 
@@ -38,7 +39,8 @@ import { UploadToDriveComponent } from './pages/upload-to-drive/upload-to-drive.
     FileInfoComponent,
     MyAccountComponent,
     MyDriveComponent,
-    UploadToDriveComponent
+    UploadToDriveComponent,
+    SizePipe
     
   ],
   imports: [

@@ -16,4 +16,12 @@ export class FileUploadService {
       headers : { Authorization : JSON.stringify(localStorage.getItem("token")) }
     });
   }
+
+  getAll(){
+    return this._http.get<any>(this.apiUrl+"/api/fileupload", {
+      headers : { Authorization : JSON.stringify(localStorage.getItem("token")) }
+    });
+  }
+
+
 }

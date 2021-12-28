@@ -39,6 +39,37 @@ routes.post("/", (req, res)=>{
     
 })
 
+routes.get("/", (req, res)=>{
+    if(req.headers.authorization){
+        var token = JSON.parse(req.headers.authorization);
+        var data = jwt.decode(token, database.encryptStr);
+        if(data){
+            // console.log(data);
+            // var id = mongodb.ObjectId(data._id);
+            MongoClient.connect(database.dbUrl, (err, con)=>{
+                var db = con.db(database.dbName);
+                db.collection(collName).find({ userid : data._id}).toArray((err, result)=>{
+                    //console.log(result);
+                    //res.send(result);
+                    // res.send(result);
+                    var newArr=result.map(x=>{
+                        x.name = database.apiUrl+"/uploads/"+x.name;
+                        return x;
+                    })
+                    // console.log(newArr);
+                    res.send(newArr);
+                })
+            })
+
+        }else{
+            res.status(401).send({ success : false, msg : "Unauthorized User"});
+
+        }
+    }else{
+        res.status(401).send({ success : false, msg : "Unauthorized User"});
+    }
+})
+
 
 
 module.exports = routes;

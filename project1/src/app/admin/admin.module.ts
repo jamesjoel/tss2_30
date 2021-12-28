@@ -11,6 +11,8 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { AddFileTypeComponent } from './pages/add-file-type/add-file-type.component';
 import { UsersComponent } from './pages/users/users.component';
+import { StudentComponent } from './pages/student/student.component';
+import { DiscountPipe } from './pipe/discount.pipe';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { UsersComponent } from './pages/users/users.component';
     HeaderComponent,
     FooterComponent,
     AddFileTypeComponent,
-    UsersComponent
+    UsersComponent,
+    StudentComponent,
+    DiscountPipe
   ],
   imports: [
     CommonModule,

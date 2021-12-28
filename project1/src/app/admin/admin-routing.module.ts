@@ -5,6 +5,7 @@ import { AddFileTypeComponent } from './pages/add-file-type/add-file-type.compon
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { FileTypeCategoryComponent } from './pages/file-type-category/file-type-category.component';
 import { LoginComponent } from './pages/login/login.component';
+import { StudentComponent } from './pages/student/student.component';
 import { UsersComponent } from './pages/users/users.component';
 
 
@@ -37,6 +38,10 @@ const routes: Routes = [
       {
         path : "users",
         component : UsersComponent
+      },
+      {
+        path : "student",
+        component : StudentComponent
       }
     ]
   }
