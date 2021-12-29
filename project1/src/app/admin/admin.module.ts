@@ -13,6 +13,11 @@ import { AddFileTypeComponent } from './pages/add-file-type/add-file-type.compon
 import { UsersComponent } from './pages/users/users.component';
 import { StudentComponent } from './pages/student/student.component';
 import { DiscountPipe } from './pipe/discount.pipe';
+import { AboutComponent } from './pages/about/about.component';
+import { Box1Component } from './shared/box1/box1.component';
+import { ProductsComponent } from './pages/products/products.component';
+import { ProductBoxComponent } from './shared/product-box/product-box.component';
+import { SortTitlePipe } from './pipe/sort-title.pipe';
 
 
 @NgModule({
@@ -26,7 +31,12 @@ import { DiscountPipe } from './pipe/discount.pipe';
     AddFileTypeComponent,
     UsersComponent,
     StudentComponent,
-    DiscountPipe
+    DiscountPipe,
+    AboutComponent,
+    Box1Component,
+    ProductsComponent,
+    ProductBoxComponent,
+    SortTitlePipe
   ],
   imports: [
     CommonModule,
