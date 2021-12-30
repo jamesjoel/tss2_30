@@ -18,6 +18,9 @@ import { Box1Component } from './shared/box1/box1.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { ProductBoxComponent } from './shared/product-box/product-box.component';
 import { SortTitlePipe } from './pipe/sort-title.pipe';
+import { ContactComponent } from './pages/contact/contact.component';
+import { Box2Component } from './shared/box2/box2.component';
+import { MyCartComponent } from './pages/my-cart/my-cart.component';
 
 
 @NgModule({
@@ -36,7 +39,10 @@ import { SortTitlePipe } from './pipe/sort-title.pipe';
     Box1Component,
     ProductsComponent,
     ProductBoxComponent,
-    SortTitlePipe
+    SortTitlePipe,
+    ContactComponent,
+    Box2Component,
+    MyCartComponent
   ],
   imports: [
     CommonModule,

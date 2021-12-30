@@ -8,6 +8,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ProductsComponent implements OnInit {
   allProduct:any=[];
+
+  cartData:any=[];
   dataComming=true;
   constructor(
     private _http : HttpClient
@@ -20,6 +22,12 @@ export class ProductsComponent implements OnInit {
    }
 
   ngOnInit(): void {
+  }
+
+  recData(obj:any){
+    // console.log("--------------", obj);
+    this.cartData.push(obj);
+    localStorage.setItem("cart", JSON.stringify(this.cartData));
   }
 
 }
