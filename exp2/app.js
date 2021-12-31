@@ -7,7 +7,7 @@ app.set("view engine", "ejs");
 app.get("/", (req, res) => {
     // res.sendFile(__dirname+"/index.html");
     var obj = { name: "rohit", city: "indore", age: 25 };
-    res.render("index", obj);
+    res.render("index", obj); 
 })
 
 app.get("/about", (req, res) => {

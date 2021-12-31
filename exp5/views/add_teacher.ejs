@@ -1,0 +1,62 @@
+<%- include('header') %>
+<div class="container my-5">
+    <div class="row">
+        
+        <div class="col-md-8 offset-md-2">
+            <a href="/teacher" class="btn btn-danger">Back</a>
+            <br />
+            <br />
+            <br />
+            <h2 class="text-center">
+                Add New Teacher Information
+            </h2>    
+            <form action="/teacher/save" method="post">
+            <div class="card mt-5">
+                <div class="card-header">
+                    <h4>Add</h4>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input name="full_name" type="text" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Age</label>
+                        <input type="text" name="age" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Education</label>
+                        <input type="text" name="edu" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Address</label>
+                        <textarea class="form-control" name="add"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>City</label>
+                        <select class="form-control" name="city">
+                            <option>Select</option>
+                            <option>Indore</option>
+                            <option>Mumbai</option>
+                            <option>Pune</option>
+                            <option>Delhi</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <br />
+                        Male <input type="radio" value="male" name="gender" />
+                        Female <input type="radio" value="female" name="gender" />
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-success">Add</button>
+                    
+                </div>
+            </div>      
+            </form> 
+        </div>
+        
+    </div>
+</div>
+<%- include('footer') %>
