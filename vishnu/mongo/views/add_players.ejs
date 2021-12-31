@@ -1,0 +1,60 @@
+<%- include('header') %>
+<div class="container">
+    <div class="row">
+        <div class="col-md-7 offset-md-2">
+            <form action="/about/save" method="post">
+                <div class="card">
+                    <div class="card-header">details</div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label>full name</label>
+                            <input type="text" name="f_n" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>age</label>
+                            <input type="text" name="age" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>address</label>
+                            <textarea class="form-control" name="add"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>gender</label>
+                            <br />
+                            Male<input type="radio" name="gender" value="male" />
+                            Female<input type="radio" name="gender" value="female" />
+                        </div>
+                        <div class="form-group">
+                            <label>games</label>
+                            <br />
+                            cricket<input type="checkbox"  name="crt" />
+                            <br />
+                            footbol<input type="checkbox"  name="fb" />
+                            <br />
+                            hockey<input type="checkbox"  name="hockky" />
+                            <br />
+                            chess<input type="checkbox"  name="chess" />
+                        </div>
+                        <div class="form-group">
+                            <label>city</label>
+                            <select class="form-control">
+                                <option>select</option>
+                                <option>tokyo</option>
+                                <option>rio</option>
+                                <option>danver</optio>
+                                <option>indore</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-sm btn-success" value="submit">done</button>
+                    </div>
+                </div>
+                <br />
+                <br />
+                <a href="/about" class="btn btn-info btn-sm">back</a>
+            </form>
+        </div>
+    </div>
+</div>
+<%- include('footer') %>

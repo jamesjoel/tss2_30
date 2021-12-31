@@ -1,0 +1,29 @@
+<div class="container" style="min-height: 600px;">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="text-center">Your Drive</h3>
+            <a routerLink="/upload-to-drive" class="btn btn-info">Upload Files</a>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-md-8 offset-md-2">
+            <table class="table table-dark">
+                <tr>
+                    <th>S.No.</th>
+                    <th>Title</th>
+                    <th>Type</th>
+                    <th>Size</th>
+                    <th>Download</th>
+                </tr>
+                <tr *ngFor="let f of allFiles; let n = index">
+                    <td>{{ n+1 }}</td>
+                    <td>{{ f.title }}</td>
+                    <td>{{ f.type }}</td>
+                    <td>{{ f.size | size }}</td>
+                    <td><a [download]="f.name" target="_blank" [href]="f.name"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                </tr>
+                
+            </table>
+        </div>
+    </div>
+</div>

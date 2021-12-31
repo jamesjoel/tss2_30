@@ -1,0 +1,68 @@
+
+<%- include("header") %>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <form action="/contact/sub" method="post">
+                <div class="card">
+                    <div class="card-header">
+                        information
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label>full name</label>
+                            <input type="text" name="full" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                           <label>address</label>
+                           <textarea class="form-control" name="add"></textarea>
+
+                        </div>
+                        <div class="form-group">
+                            <label>gender</label>
+                            <br />
+                            Male<input type="radio" value="male" name="gender"  />
+                            Female<input type="radio" value="female" name="gender" />
+
+                        </div>
+                        <div class="form-group">
+                            <label>city</label>
+                            <select name="city" class="form-control">
+                                <option>select</option>
+                                <option>indore</option>
+                                <option>bhopal</option>
+                                <option>halol</option>
+                            </select>
+                        </div>
+                        <div class="card-footer">
+                            <input type="submit" class="btn btn-success" />
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <table class="table table-bordered table-dark table-dark mt-5">
+               <tr>
+                    <th>S.no</th>
+                    <th>name</th>
+                    <th>Address</th>
+                    <th>Gender</th>
+                    <th>City</th>
+                   
+                </tr>
+                <% result.forEach(function(x,n){%>
+                <tr>
+                    <td><%= n+1%></td>
+                    <td><%= x.full%></td>
+                    <td><%= x.add %></td>
+                    <td><%= x.gender%></td>
+                    <td><%= x.city %></td>
+                </tr>
+                <%})%>
+
+
+            </table>
+        </div>
+    </div>
+</div>
+<%- include('footer') %>
