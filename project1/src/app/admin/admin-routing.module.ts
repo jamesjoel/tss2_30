@@ -9,6 +9,7 @@ import { FileTypeCategoryComponent } from './pages/file-type-category/file-type-
 import { LoginComponent } from './pages/login/login.component';
 import { MyCartComponent } from './pages/my-cart/my-cart.component';
 import { ProductsComponent } from './pages/products/products.component';
+import { StatecityComponent } from './pages/statecity/statecity.component';
 import { StudentComponent } from './pages/student/student.component';
 import { UsersComponent } from './pages/users/users.component';
 
@@ -62,6 +63,10 @@ const routes: Routes = [
       {
         path : "my-cart",
         component : MyCartComponent
+      },
+      {
+        path : "statecity",
+        component : StatecityComponent
       }
     ]
   }

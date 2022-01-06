@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 
+import { FormsModule } from '@angular/forms';
+
 import { AdminRoutingModule } from './admin-routing.module';
 import { AdminComponent } from './admin.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -21,6 +23,7 @@ import { SortTitlePipe } from './pipe/sort-title.pipe';
 import { ContactComponent } from './pages/contact/contact.component';
 import { Box2Component } from './shared/box2/box2.component';
 import { MyCartComponent } from './pages/my-cart/my-cart.component';
+import { StatecityComponent } from './pages/statecity/statecity.component';
 
 
 @NgModule({
@@ -42,12 +45,14 @@ import { MyCartComponent } from './pages/my-cart/my-cart.component';
     SortTitlePipe,
     ContactComponent,
     Box2Component,
-    MyCartComponent
+    MyCartComponent,
+    StatecityComponent
   ],
   imports: [
     CommonModule,
     AdminRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class AdminModule { }
