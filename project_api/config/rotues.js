@@ -8,4 +8,7 @@ routes.use("/api/auth", require("../controllers/AuthController"));
 routes.use("/api/userinfo", require("../controllers/UserInfoController"));
 routes.use("/api/fileupload", require("../controllers/FileUploadController"));
 
+routes.use("/api/state", require("../controllers/StateController"));
+
+
 module.exports = routes;
