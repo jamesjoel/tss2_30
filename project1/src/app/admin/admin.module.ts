@@ -24,6 +24,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { Box2Component } from './shared/box2/box2.component';
 import { MyCartComponent } from './pages/my-cart/my-cart.component';
 import { StatecityComponent } from './pages/statecity/statecity.component';
+import { MydirDirective } from './directives/mydir.directive';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { StatecityComponent } from './pages/statecity/statecity.component';
     ContactComponent,
     Box2Component,
     MyCartComponent,
-    StatecityComponent
+    StatecityComponent,
+    MydirDirective
   ],
   imports: [
     CommonModule,

@@ -1,11 +1,19 @@
 <div class="container mt-4">
     <div class="row">
         <div class="col-md-12">
+            <h1 mydir>The Stepping Stone</h1>
             <h3 #a>Dashboard</h3>
             <br />
             <button #btn style="display: none;" data-target="#box" data-toggle="modal">Show</button>
             <br />
             <button (click)="demo(btn)">OK</button>
+            <pre>{{ num | json }}</pre>
+            <input type="text" [(ngModel)]="num" />
+            <!-- <p style="font-size : {{num}}px">hello</p> -->
+            <p [ngStyle]="obj">hello world</p>
+            <Br />
+            <Br />
+            <button [disabled] = "check">Login</button>
         </div>
     </div>
 </div>
