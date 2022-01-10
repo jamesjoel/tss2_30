@@ -10,9 +10,17 @@ app.use(express.urlencoded());
 app.use(cors());
 app.use(upload());
 
+app.get("/", (req, res)=>{
+    res.sendFile(__dirname+"/index.html");
+})
 
 
 app.use(routes);
+
+app.get("*", (req, res)=>{
+    res.sendFile(__dirname+"/index.html");
+
+})
 
 
 var port = process.env.PORT || 3000;
