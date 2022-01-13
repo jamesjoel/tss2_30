@@ -1,1 +1,54 @@
-<p>contact works!</p>
+<div class="container mt-5" style="min-height: 600px;">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <!-- <pre>{{ obj | json }}</pre> -->
+            <br />
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" [(ngModel)]="obj.name" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Age</label>
+                        <input type="text" [(ngModel)]="obj.age" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>City</label>
+                        <select [(ngModel)]="obj.city" class="form-control" >
+                            <option value="">Select</option>
+                            <option value="indore">Indore</option>
+                            <option value="pune">Pune</option>
+                            <option value="mumbai">Mumbai</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <button class="btn btn-primary" (click)="add()">Add</button>
+            </div>
+            <div class="row">
+                <div class="col-md-12 mt-4">
+                    <table class="table table-dark table-bordered">
+                        <tr>
+                            <th>S.No.</th>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>City</th>
+                        </tr>
+                        <tr *ngFor="let d of data; let n = index">
+                            <td>{{ n+1 }}</td>
+                            <td>{{ d.name }}</td>
+                            <td>{{ d.age }}</td>
+                            <td>{{ d.city }}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -7,7 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  num = 20;
+
+  check=true;
+  obj = {
+    "font-size" : "20px",
+    "background-color" : "red"
+  }
+  constructor() {
+    console.log(this.num);
+   }
 
   ngOnInit(): void {
   }
