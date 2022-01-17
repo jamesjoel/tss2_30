@@ -11,12 +11,12 @@ app.use(cors());
 app.use(upload());
   
 app.get("/",(req,res)=>{
-    res.sendFile(__dirname+"index.html");
+    res.sendFile(__dirname+"/index.html");
 })
 
 app.use(require("./config/routes"));
 app.get("*",(req,res)=>{
-    res.sendFile(__dirname+"index.html");
+    res.sendFile(__dirname+"/index.html");
 })
 
 var port = process.env.PORT  || 8060;
